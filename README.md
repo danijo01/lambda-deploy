@@ -1,5 +1,6 @@
 Lambda Deploy
 =========
+[![Build Status](https://travis-ci.org/spetex/lambda-deploy.svg?branch=master)](https://travis-ci.org/spetex/lambda-deploy)
 
 A brief description of the role goes here.
 

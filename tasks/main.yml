@@ -1,5 +1,10 @@
 ---
 # Create Lambda functions
+- name: Archive Lambda source files
+  archive:
+    path: '{{ lambda_dir }}'
+    dest: 'lambda.zip'
+    format: 'zip'
 - name: Deploy Lambda Function
   lambda:
     name: '{{ lambda_name }}'

@@ -1,2 +1,14 @@
 ---
-# tasks file for lambda-deploy
+# Create Lambda functions
+- name: Deploy Lambda Function
+  lambda:
+    name: '{{ lambda_name }}'
+    region: '{{ aws_region }}'
+    state: present
+    zip_file: '{{ zip_file }}'
+    runtime: '{{ runtime }}'
+    role: '{{ role  }}'
+    handler: '{{ handler }}'
+    vpc_subnet_ids: '{{ vpc_subnet_ids }}'
+    vpc_security_group_ids: '{{ vpc_sec_group_ids }}'
+    environment_variables: '{{ env_vars }}'

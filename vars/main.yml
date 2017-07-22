@@ -1,2 +1,5 @@
 ---
 # vars file for lambda-deploy
+zip_file: 'test_lambda.zip'
+handler: '{{ filename }}.{{ handler_name }}'
+

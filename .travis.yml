@@ -3,5 +3,5 @@ python:
   - "2.7"
   - "3.6"
 script:
-  - ansible-playbook -i tests/inventory tests/test.yml
+  - ansible-playbook -i tests/inventory tests/test.yml -e "@tests/config.json" --sudo
   - ansible-lint .

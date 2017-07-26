@@ -5,6 +5,12 @@
     path: '{{ lambda_dir }}'
     dest: 'lambda.zip'
     format: 'zip'
+- name: Install botocore
+  pip:
+    name: botocore
+- name: Install boto3
+  pip:
+    name: boto3
 - name: Deploy Lambda Function
   lambda:
     name: '{{ lambda_name }}'
